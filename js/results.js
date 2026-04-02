@@ -245,7 +245,7 @@ class ResultsPage {
             'Purifying Cleanser': '/images/gentle-foaming-cleanser_1.jpg',
             'Clear & Calm Serum': '/images/clear-calm-serum_1.jpg',
             'Hydrating Gel': '/images/hydrating-gel_1.jpg',
-            'Hydrating Toner': '/images/hydrating-toner.jpg', // Fixed - image now in images folder
+            'Hydrating Toner': '/images/hydrating-toner.jpg',
             'BPO 2.5%': '/images/bpo-2-5_1.jpg',
             'HA Peptide Serum': '/images/ha-peptide-serum-1_1.jpg',
             'Hydralipid Moisturizer': '/images/hydralipid-moisturizer-1_1.jpg',
