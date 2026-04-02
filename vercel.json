@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/quiz", "destination": "/quiz.html" },
+    { "source": "/results", "destination": "/results.html" },
+    { "source": "/cart", "destination": "/cart.html" }
+  ],
+  "cleanUrls": true
+}
