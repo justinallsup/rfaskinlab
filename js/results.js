@@ -245,7 +245,7 @@ class ResultsPage {
             'Purifying Cleanser': '/images/gentle-foaming-cleanser_1.jpg',
             'Clear & Calm Serum': '/images/clear-calm-serum_1.jpg',
             'Hydrating Gel': '/images/hydrating-gel_1.jpg',
-            'Hydrating Toner': 'https://rfaskincare.com/cdn/shop/files/RFAskincare_9227layers_33ef6b5c-9186-4ed3-bdbd-f4dbc48545c8.jpg?v=1732722202&width=1000',
+            'Hydrating Toner': '/images/hydrating-toner.jpg', // Fixed - image now in images folder
             'BPO 2.5%': '/images/bpo-2-5_1.jpg',
             'HA Peptide Serum': '/images/ha-peptide-serum-1_1.jpg',
             'Hydralipid Moisturizer': '/images/hydralipid-moisturizer-1_1.jpg',

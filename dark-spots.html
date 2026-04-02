@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medical-grade skincare routine">
+    <title>Skincare Routine | RFA Skincare</title>
+    
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '297559342429509');
+    fbq('track', 'PageView');
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B69QWXC26"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4B69QWXC26');
+    </script>
+    
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-slug="dark-spots">
+    <!-- Header -->
+    <header class="landing-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/rfa-logo.svg" alt="RFA Skincare" width="81" height="61">
+            </a>
+            <div class="header-trust">Board Certified NP • Medical-Grade Skincare</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="landing-hero">
+        <div class="container">
+            <h1 id="heroHeadline" class="landing-headline">
+                Loading...
+            </h1>
+            
+            <p id="heroSubheadline" class="landing-subheadline">
+                Loading...
+            </p>
+            
+            <!-- Primary CTA -->
+            <div class="hero-cta-group">
+                <a href="cart.html" id="heroCTAPrimary" class="btn btn-primary btn-large" data-track="hero-cta-primary">
+                    Shop Routine
+                </a>
+                <a href="quiz.html" id="heroCTASecondary" class="btn btn-secondary quiz-link" data-track="hero-cta-secondary">
+                    Take the Quiz
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundle Card -->
+    <section class="bundle-section-landing">
+        <div class="container">
+            <div id="bundleCard" class="bundle-card-landing">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="products-section-landing">
+        <div class="container">
+            <h2 class="section-title-landing">What's Included</h2>
+            <div id="productsGrid" class="products-grid-landing">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works -->
+    <section class="benefits-section-landing">
+        <div class="container">
+            <h2 class="section-title-landing">Why This Works</h2>
+            <ul id="benefitsList" class="benefits-list-landing">
+                <!-- Populated by JS -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="testimonial-section-landing">
+        <div class="container">
+            <div id="testimonialCard" class="testimonial-card-landing">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Fallback -->
+    <section class="quiz-fallback-section">
+        <div class="container">
+            <div class="quiz-fallback-card">
+                <h2 class="quiz-fallback-headline">Want a Routine Tailored Exactly to Your Skin?</h2>
+                <p class="quiz-fallback-text">Not sure this is the right routine for you? Take our 30-second quiz to get a personalized recommendation.</p>
+                <a href="quiz.html" class="btn btn-primary btn-large quiz-link">
+                    Take the 30-Second Quiz
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="container">
+            <p>&copy; 2026 RFA Skincare. All rights reserved.</p>
+            <p class="footer-disclaimer">This is for informational purposes. Consult a healthcare provider for medical advice.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/rfa-bundles.js"></script>
+    <script src="js/landing-config.js"></script>
+    <script src="js/landing-page.js"></script>
+    <script>
+        // Initialize landing page with slug from data attribute
+        document.addEventListener('DOMContentLoaded', () => {
+            const slug = document.body.getAttribute('data-slug');
+            if (slug) {
+                new LandingPage(slug);
+            } else {
+                console.error('No slug found on body element');
+                window.location.href = '/';
+            }
+        });
+    </script>
+</body>
+</html>
