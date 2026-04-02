@@ -1,0 +1,539 @@
+/**
+ * RESULTS PAGE STYLES
+ * Mobile-first, conversion-optimized design
+ * Single unified system for ALL result types
+ */
+
+/* ==========================================
+   GLOBAL & RESET
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2C2520;
+    background: #FDFCFB;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.results-header {
+    background: white;
+    border-bottom: 1px solid #E5E3DF;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.results-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+.header-trust {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8B7E74;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   HERO RESULT SECTION
+   ========================================== */
+
+.results-hero {
+    padding: 40px 20px 30px;
+    text-align: center;
+    background: linear-gradient(180deg, #FDFCFB 0%, #F9F8F6 100%);
+}
+
+.result-headline {
+    font-family: 'Cormorant', serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #2C2520;
+    margin: 0 auto 16px;
+    max-width: 700px;
+}
+
+.result-subheadline {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #6B645D;
+    max-width: 600px;
+    margin: 0 auto 12px;
+}
+
+.result-trust-line {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8B7E74;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   BUNDLE HERO CARD (IMMEDIATE CONVERSION)
+   ========================================== */
+
+.bundle-section {
+    padding: 30px 20px;
+    background: white;
+}
+
+.bundle-hero-card {
+    background: linear-gradient(135deg, #F9F8F6 0%, #FFFFFF 100%);
+    border: 2px solid #E5E3DF;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.bundle-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.bundle-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.bundle-name {
+    font-family: 'Cormorant', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #2C2520;
+    margin: 0 0 12px 0;
+}
+
+.bundle-rating {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #8B7E74;
+}
+
+.rating-text {
+    margin-left: 8px;
+}
+
+.bundle-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6B645D;
+    margin: 0 0 24px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bundle-price-row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.bundle-price {
+    font-family: 'Cormorant', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #2C2520;
+}
+
+.bundle-price-label {
+    font-size: 14px;
+    color: #8B7E74;
+}
+
+.bundle-cta {
+    margin: 0 auto 16px auto;
+    max-width: 400px;
+}
+
+/* CTA Decision Block */
+.cta-decision-block {
+    margin-top: 32px;
+    padding: 24px 20px;
+    background: #FDFCFB;
+    border: 1px solid #E5E3DF;
+    border-radius: 8px;
+}
+
+.urgency-line {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #2C2520;
+    text-align: center;
+    margin: 16px 0 0 0;
+    font-weight: 500;
+}
+
+.subscription-line {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6B645D;
+    text-align: center;
+    margin: 16px 0 4px 0;
+}
+
+.subscription-micro {
+    font-size: 12px;
+    color: #8B7E74;
+    text-align: center;
+    font-style: italic;
+    margin: 0 0 16px 0;
+}
+
+.trust-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid #E5E3DF;
+}
+
+.trust-bullet {
+    font-size: 13px;
+    color: #6B645D;
+    text-align: center;
+    font-weight: 500;
+}
+
+.bundle-trust {
+    font-size: 13px;
+    color: #8B7E74;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   PRODUCT STACK
+   ========================================== */
+
+.products-section {
+    padding: 60px 20px;
+    background: #F9F8F6;
+}
+
+.section-title {
+    font-family: 'Cormorant', serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2C2520;
+}
+
+.product-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stack-product {
+    background: white;
+    border: 1px solid #E5E3DF;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.stack-product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.stack-product.is-hero {
+    border: 2px solid #D4AF37;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #D4AF37;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 16px;
+    display: block;
+}
+
+.product-name {
+    font-family: 'Cormorant', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #2C2520;
+    margin: 0 0 8px 0;
+}
+
+.product-benefit {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6B645D;
+    margin: 0 0 16px 0;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C2520;
+}
+
+/* ==========================================
+   USAGE & AUDIENCE SECTIONS
+   ========================================== */
+
+.usage-section,
+.audience-section {
+    padding: 50px 20px;
+    background: white;
+}
+
+.usage-card,
+.audience-card {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.usage-card h2,
+.audience-card h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #2C2520;
+}
+
+.usage-instructions p,
+.audience-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6B645D;
+}
+
+/* ==========================================
+   FINAL CTA
+   ========================================== */
+
+.final-cta-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #F9F8F6 0%, #FFFFFF 100%);
+}
+
+.final-cta-card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 50px 30px;
+    border-radius: 12px;
+    border: 2px solid #E5E3DF;
+}
+
+.final-cta-card h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #2C2520;
+}
+
+.final-cta-card p {
+    font-size: 16px;
+    color: #6B645D;
+    margin-bottom: 24px;
+}
+
+.guarantee-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #8B7E74;
+    margin-top: 20px;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2C2520 0%, #1A1714 100%);
+    color: white;
+    padding: 16px 40px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1A1714 0%, #000000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.btn-large {
+    width: 100%;
+    max-width: 400px;
+    padding: 18px 40px;
+    font-size: 18px;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.results-footer {
+    background: #2C2520;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.results-footer p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #8B7E74;
+    margin-top: 16px;
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATION
+   ========================================== */
+
+@media (max-width: 768px) {
+    .result-headline {
+        font-size: 28px;
+    }
+    
+    .result-subheadline {
+        font-size: 15px;
+    }
+    
+    .bundle-hero-card {
+        padding: 30px 20px;
+    }
+    
+    .bundle-name {
+        font-size: 26px;
+    }
+    
+    .bundle-price {
+        font-size: 38px;
+    }
+    
+    .bundle-image {
+        max-width: 280px;
+    }
+    
+    .cta-decision-block {
+        padding: 20px 16px;
+    }
+    
+    .urgency-line {
+        font-size: 14px;
+    }
+    
+    .subscription-line {
+        font-size: 13px;
+    }
+    
+    .trust-bullets {
+        gap: 6px;
+    }
+    
+    .product-stack {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .header-trust {
+        display: none;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .result-headline {
+        font-size: 24px;
+    }
+    
+    .bundle-price {
+        font-size: 32px;
+    }
+    
+    .results-hero {
+        padding: 30px 20px 20px;
+    }
+    
+    .bundle-section {
+        padding: 20px;
+    }
+}

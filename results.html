@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your personalized clinical skincare routine from RFA Skincare.">
+    <title>Your Custom Routine | RFA Skincare</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '297559342429509');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/results.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="results-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/rfa-logo.svg" alt="RFA Skincare" width="81" height="61">
+            </a>
+            <div class="header-trust">Board Certified NP • Medical-Grade Skincare</div>
+        </div>
+    </header>
+
+    <!-- HERO RESULT SECTION (ABOVE THE FOLD) -->
+    <section class="results-hero">
+        <div class="container">
+            <!-- Dynamic Headline -->
+            <h1 id="resultHeadline" class="result-headline">
+                Your Personalized Routine Is Ready
+            </h1>
+            
+            <!-- Dynamic Subheadline -->
+            <p id="resultSubheadline" class="result-subheadline">
+                We built this routine specifically for your skin.
+            </p>
+            
+            <!-- Trust Line -->
+            <p id="resultTrustLine" class="result-trust-line">
+                Clinically proven results
+            </p>
+        </div>
+    </section>
+
+    <!-- BUNDLE HERO CARD (IMMEDIATELY AFTER HEADLINE) -->
+    <section class="bundle-section">
+        <div class="container">
+            <div id="bundleCard" class="bundle-hero-card">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT STACK (INDIVIDUAL PRODUCTS) -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">What's Included</h2>
+            <div id="productStack" class="product-stack">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="usage-section">
+        <div class="container">
+            <div class="usage-card">
+                <h2>How to Use Your Routine</h2>
+                <div id="usageInstructions" class="usage-instructions">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="audience-section">
+        <div class="container">
+            <div class="audience-card">
+                <h2>Who This Routine Is For</h2>
+                <p id="audienceText">
+                    <!-- Populated by JS -->
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="final-cta-card">
+                <h2>Ready to Transform Your Skin?</h2>
+                <p>Start your clinical-grade routine today.</p>
+                <a href="cart.html" class="btn btn-primary btn-large">
+                    Get My Routine
+                </a>
+                <p class="guarantee-text">
+                    ✓ Medical-Grade Ingredients<br>
+                    ✓ Designed to Work Together<br>
+                    ✓ Free Shipping Over $150
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="results-footer">
+        <div class="container">
+            <p>&copy; 2026 RFA Skincare. All rights reserved.</p>
+            <p class="disclaimer">This assessment is for informational purposes. Consult a healthcare provider for medical advice.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/result-config.js"></script>
+    <script src="js/rfa-bundles.js"></script>
+    <script src="js/smart-result-engine.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>

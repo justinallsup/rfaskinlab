@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Routine - RFA Skinlab</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '297559342429509');
+    fbq('track', 'PageView');
+    fbq('track', 'InitiateCheckout');
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B69QWXC26"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4B69QWXC26');
+      gtag('event', 'begin_checkout', {
+          items: []
+      });
+    </script>
+</head>
+<body>
+    <div class="container" style="max-width: 800px; margin: 80px auto; padding: 40px; text-align: center;">
+        <h1 style="font-size: 32px; margin-bottom: 20px;">Redirecting to Checkout...</h1>
+        <p style="font-size: 18px; color: #666; margin-bottom: 40px;">
+            We're taking you to rfaskincare.com to complete your purchase.
+        </p>
+        
+        <div style="margin: 40px 0;">
+            <div style="display: inline-block; width: 50px; height: 50px; border: 4px solid #f3f3f3; border-top: 4px solid #1A1A1A; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        </div>
+        
+        <p style="font-size: 14px; color: #999;">
+            If you're not redirected automatically, <a href="https://rfaskincare.com" style="color: #1A1A1A; text-decoration: underline;">click here</a>.
+        </p>
+    </div>
+    
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <script>
+        // Get cart data from localStorage
+        const cartData = localStorage.getItem('cartProducts');
+        const quizData = localStorage.getItem('quizData');
+        
+        // Check for bundle parameter from landing page
+        const urlParams = new URLSearchParams(window.location.search);
+        const bundleParam = urlParams.get('bundle');
+        
+        console.log('Cart data:', cartData);
+        console.log('Quiz data:', quizData);
+        console.log('Bundle param:', bundleParam);
+        
+        // Determine which bundle to redirect to
+        let bundleUrl = 'https://rfaskincare.com/collections/bundles';
+        
+        // Map bundle keys to URLs
+        const bundleUrlMap = {
+            'redness': 'https://rfaskincare.com/products/rosacea-bundle',
+            'acne': 'https://rfaskincare.com/products/acne-bundle',
+            'pigmentation': 'https://rfaskincare.com/products/pigmentation-bundle',
+            'antiaging': 'https://rfaskincare.com/products/rfa-foundational-5',
+            'dryness': 'https://rfaskincare.com/products/hydration-bundle',
+            'pregnancy': 'https://rfaskincare.com/products/pregnancy-bundle',
+            'teen': 'https://rfaskincare.com/products/teen-bundle'
+        };
+        
+        // Priority 1: Landing page bundle parameter
+        if (bundleParam && bundleUrlMap[bundleParam]) {
+            bundleUrl = bundleUrlMap[bundleParam];
+        }
+        // Priority 2: Quiz data
+        else if (quizData) {
+            try {
+                const data = JSON.parse(quizData);
+                const concern = data.concern || data.routineType;
+                
+                const concernBundleMap = {
+                    'redness': 'https://rfaskincare.com/products/rosacea-bundle',
+                    'acne': 'https://rfaskincare.com/products/acne-bundle',
+                    'pigmentation': 'https://rfaskincare.com/products/pigmentation-bundle',
+                    'aging': 'https://rfaskincare.com/products/rfa-foundational-5',
+                    'dryness': 'https://rfaskincare.com/products/hydration-bundle',
+                    'pregnancy': 'https://rfaskincare.com/products/pregnancy-bundle',
+                    'teen': 'https://rfaskincare.com/products/teen-bundle',
+                    'barrier-repair': 'https://rfaskincare.com/products/rosacea-bundle',
+                    'acne-control': 'https://rfaskincare.com/products/acne-bundle',
+                    'hydration': 'https://rfaskincare.com/products/hydration-bundle',
+                    'brightening': 'https://rfaskincare.com/products/pigmentation-bundle',
+                    'anti-aging': 'https://rfaskincare.com/products/rfa-foundational-5',
+                    'balanced': 'https://rfaskincare.com/products/rosacea-bundle'
+                };
+                
+                if (concern && concernBundleMap[concern]) {
+                    bundleUrl = concernBundleMap[concern];
+                }
+            } catch (e) {
+                console.error('Error parsing quiz data:', e);
+            }
+        }
+        
+        // Track checkout started
+        if (typeof gtag === 'function') {
+            gtag('event', 'checkout_redirect', {
+                destination: bundleUrl,
+                source: bundleParam ? 'landing_page' : 'quiz'
+            });
+        }
+        
+        // Redirect after 2 seconds
+        setTimeout(() => {
+            window.location.href = bundleUrl;
+        }, 2000);
+    </script>
+</body>
+</html>
