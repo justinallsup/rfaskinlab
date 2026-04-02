@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="5-question clinical skin assessment to receive your personalized treatment protocol.">
+    <meta name="theme-color" content="#F9F8F6">
+    <title>Skin Quiz | RFA Skincare</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '297559342429509');
+    fbq('track', 'PageView');
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B69QWXC26"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4B69QWXC26');
+    </script>
+    
+    <link rel="stylesheet" href="https://rfaskinlab.com/css/quiz-mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="quizApp">
+        <div class="quiz-progress">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-container" id="quizContainer"></div>
+    </div>
+
+    <script src="https://rfaskinlab.com/js/rfa-bundles.js"></script>
+    <script src="https://rfaskinlab.com/js/optimized-quiz-data.js"></script>
+    <script src="https://rfaskinlab.com/js/smart-result-engine.js"></script>
+    <script>
+    // OPTIMIZED QUIZ ENGINE - 5 questions, fast, mobile-first
+    // Phase 2: Early email capture + comprehensive tracking
+    class OptimizedQuiz {
+        constructor() {
+            this.currentQuestionIndex = 0;
+            this.answers = {};
+            this.totalQuestions = optimizedQuizData.questions.length;
+            this.init();
+        }
+
+        init() {
+            // Preserve concern from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            this.initialConcern = urlParams.get('concern');
+            
+            // Track quiz started
+            this.trackQuizStarted();
+            
+            this.renderQuestion();
+            this.updateProgress();
+        }
+        
+        trackQuizStarted() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', { content_name: 'Quiz Started' });
+            }
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'quiz_started', {
+                    concern: this.initialConcern || 'default',
+                    total_questions: this.totalQuestions
+                });
+            }
+            
+            console.log('✅ Quiz started tracking fired');
+        }
+
+        renderQuestion() {
+            const container = document.getElementById('quizContainer');
+            const questionData = optimizedQuizData.questions[this.currentQuestionIndex];
+
+            if (!questionData) {
+                this.completeQuiz();
+                return;
+            }
+
+            const html = `
+                <div class="fade-in">
+                    <div class="question-number">${questionData.number}</div>
+                    <div class="question-text">${questionData.text}</div>
+                    
+                    <div class="quiz-options">
+                        ${questionData.options.map(option => `
+                            <div class="quiz-option" data-value="${option.value}">
+                                ${option.icon ? `<div class="option-icon">${option.icon}</div>` : ''}
+                                <div class="option-text">${option.text}</div>
+                                ${option.subtext ? `<div class="option-subtext">${option.subtext}</div>` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    ${this.currentQuestionIndex > 0 ? `
+                        <button class="quiz-back" onclick="optimizedQuiz.goBack()">← Back</button>
+                    ` : ''}
+                </div>
+            `;
+
+            container.innerHTML = html;
+            this.attachOptionListeners();
+
+            if (this.answers[questionData.id]) {
+                const selected = container.querySelector(`[data-value="${this.answers[questionData.id]}"]`);
+                if (selected) selected.classList.add('selected');
+            }
+        }
+
+        attachOptionListeners() {
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.addEventListener('click', (e) => {
+                    const value = e.currentTarget.dataset.value;
+                    this.selectAnswer(value);
+                });
+            });
+        }
+
+        selectAnswer(value) {
+            const questionData = optimizedQuizData.questions[this.currentQuestionIndex];
+            this.answers[questionData.id] = value;
+
+            document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelector(`[data-value="${value}"]`).classList.add('selected');
+
+            // Track question answered
+            this.trackQuestionAnswered(questionData.id, value, questionData.number);
+
+            setTimeout(() => this.nextQuestion(), 150);
+        }
+        
+        trackQuestionAnswered(questionId, answer, questionNumber) {
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'QuizProgress', { 
+                    question_id: questionId,
+                    question_number: questionNumber,
+                    answer: answer
+                });
+            }
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'quiz_question_answered', {
+                    question_id: questionId,
+                    question_number: questionNumber,
+                    answer: answer,
+                    progress_percent: ((questionNumber / this.totalQuestions) * 100).toFixed(0)
+                });
+            }
+            
+            console.log(`✅ Question ${questionNumber} answered:`, answer);
+        }
+
+        nextQuestion() {
+            this.currentQuestionIndex++;
+            this.renderQuestion();
+            this.updateProgress();
+        }
+
+        goBack() {
+            if (this.currentQuestionIndex > 0) {
+                this.currentQuestionIndex--;
+                this.renderQuestion();
+                this.updateProgress();
+            }
+        }
+
+        updateProgress() {
+            const totalSteps = this.totalQuestions;
+            const currentStep = this.currentQuestionIndex;
+            const progress = ((currentStep + 1) / (totalSteps + 1)) * 100;
+            document.getElementById('progressBar').style.width = `${progress}%`;
+        }
+        
+        completeQuiz() {
+            this.buildAndRedirect();
+        }
+        
+        buildAndRedirect() {
+            this.trackQuizCompleted();
+            
+            const waitForBundles = (attempts = 0) => {
+                if (typeof window.RFA_BUNDLES !== 'undefined') {
+                    console.log('✅ RFA_BUNDLES loaded, building results...');
+                    this.buildResults();
+                } else if (attempts < 20) {
+                    console.log('⏳ Waiting for RFA_BUNDLES... attempt', attempts + 1);
+                    setTimeout(() => waitForBundles(attempts + 1), 100);
+                } else {
+                    console.error('❌ RFA_BUNDLES failed to load');
+                    alert('Error loading product data. Please try again.');
+                    window.location.reload();
+                }
+            };
+            
+            waitForBundles();
+        }
+        
+        buildResults() {
+            // Build smart results
+            const resultEngine = new SmartResultEngine(this.answers);
+            
+            // Track quiz submission (use concern instead of routineType)
+            this.trackQuizSubmission(resultEngine.concern);
+            
+            const quizData = {
+                answers: this.answers,
+                concern: resultEngine.concern, // NEW: Primary concern field
+                routineType: resultEngine.routineType, // DEPRECATED: Keep for legacy support
+                products: resultEngine.products,
+                headline: resultEngine.getHeadline(),
+                description: resultEngine.getDescription(),
+                bundleDetails: resultEngine.bundle,
+                bundle: resultEngine.bundle,
+                initialConcern: this.initialConcern,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('quizData', JSON.stringify(quizData));
+
+            const submitBtn = document.querySelector('.btn-submit');
+            if (submitBtn) {
+                submitBtn.textContent = 'Building Your Routine...';
+                submitBtn.disabled = true;
+            }
+
+            setTimeout(() => {
+                window.location.href = 'results.html';
+            }, 800);
+        }
+        
+        trackQuizCompleted() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'CompleteRegistration', { 
+                    content_name: 'Quiz Completed',
+                    status: 'completed'
+                });
+            }
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'quiz_completed', {
+                    questions_answered: Object.keys(this.answers).length,
+                    total_questions: this.totalQuestions
+                });
+            }
+            
+            console.log('✅ Quiz completed tracking fired');
+        }
+        
+        trackQuizSubmission(concern) {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', {
+                    content_name: 'Quiz Submitted',
+                    concern: concern
+                });
+            }
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    method: 'quiz',
+                    concern: concern
+                });
+            }
+            
+            console.log('✅ Quiz submitted tracking fired');
+        }
+    }
+
+    let optimizedQuiz;
+    document.addEventListener('DOMContentLoaded', () => {
+        optimizedQuiz = new OptimizedQuiz();
+    });
+    </script>
+</body>
+</html>
