@@ -1,0 +1,533 @@
+/**
+ * HOMEPAGE STYLES
+ * Conversion-optimized, mobile-first design
+ */
+
+/* ==========================================
+   GLOBAL RESET & BASE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2C2520;
+    background: #FDFCFB;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   HERO SECTION (CONVERSION-OPTIMIZED)
+   ========================================== */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, #F9F8F6 0%, #FFFFFF 100%);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+}
+
+.hero-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content-centered {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-headline {
+    font-family: 'Cormorant', serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #2C2520;
+    margin: 0 0 20px 0;
+}
+
+.break-desktop {
+    display: inline;
+}
+
+.hero-subhead {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6B645D;
+    margin: 0 0 12px 0;
+    max-width: 480px;
+}
+
+.hero-reinforcement {
+    font-size: 15px;
+    font-style: italic;
+    color: #8B7E74;
+    margin: 0 0 28px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Primary CTA */
+.btn {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2C2520 0%, #1A1714 100%);
+    color: white;
+    padding: 18px 48px;
+    font-size: 18px;
+    box-shadow: 0 4px 16px rgba(44, 37, 32, 0.2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1A1714 0%, #000000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(44, 37, 32, 0.3);
+}
+
+.btn-hero {
+    margin-bottom: 20px;
+    display: inline-block;
+    max-width: 400px;
+}
+
+.btn-large {
+    padding: 20px 50px;
+    font-size: 19px;
+}
+
+/* Micro Benefits */
+.micro-benefits {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.micro-item {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6B645D;
+}
+
+/* Trust Block */
+.trust-block {
+    padding: 16px 0;
+    border-top: 1px solid #E5E3DF;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trust-rating,
+.trust-patients,
+.trust-guarantee {
+    font-size: 13px;
+    color: #8B7E74;
+    margin: 4px 0;
+}
+
+.trust-rating {
+    font-weight: 600;
+    color: #2C2520;
+}
+
+/* Hero Visual */
+.hero-visual {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.image-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(44, 37, 32, 0.9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   TRANSFORMATIONS SECTION
+   ========================================== */
+
+.transformations {
+    padding: 80px 20px;
+    background: white;
+}
+
+.section-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8B7E74;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Cormorant', serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+    color: #2C2520;
+    margin-bottom: 50px;
+}
+
+.transformation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transformation-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.result-caption {
+    font-size: 14px;
+    color: #6B645D;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Testimonials */
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #F9F8F6;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #E5E3DF;
+}
+
+.stars {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #2C2520;
+    margin-bottom: 16px;
+}
+
+.testimonial-author {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8B7E74;
+}
+
+/* ==========================================
+   HOW IT WORKS
+   ========================================== */
+
+.how-it-works {
+    padding: 80px 20px;
+    background: #F9F8F6;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-card {
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2C2520 0%, #1A1714 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step-title {
+    font-family: 'Cormorant', serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #2C2520;
+}
+
+.step-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6B645D;
+}
+
+.cta-center {
+    text-align: center;
+}
+
+/* ==========================================
+   WHY RFA
+   ========================================== */
+
+.why-rfa {
+    padding: 80px 20px;
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.feature-title {
+    font-family: 'Cormorant', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #2C2520;
+}
+
+.feature-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6B645D;
+}
+
+/* ==========================================
+   FINAL CTA
+   ========================================== */
+
+.final-cta {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #2C2520 0%, #1A1714 100%);
+    color: white;
+}
+
+.final-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.final-cta-headline {
+    font-family: 'Cormorant', serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.final-cta-text {
+    font-size: 18px;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.final-cta .btn-primary {
+    background: white;
+    color: #2C2520;
+}
+
+.final-cta .btn-primary:hover {
+    background: #F9F8F6;
+}
+
+.final-cta-trust {
+    font-size: 14px;
+    margin-top: 24px;
+    opacity: 0.8;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    padding: 40px 20px;
+    background: #2C2520;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.footer-disclaimer {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 16px;
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATION
+   ========================================== */
+
+@media (max-width: 968px) {
+    .hero-grid {
+        display: block;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-headline {
+        font-size: 36px;
+    }
+    
+    .break-desktop {
+        display: none;
+    }
+    
+    .btn-hero {
+        max-width: 100%;
+    }
+    
+    .micro-benefits {
+        justify-content: center;
+    }
+    
+    .trust-block {
+        text-align: center;
+    }
+    
+    .transformation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 20px 30px;
+        min-height: auto;
+    }
+    
+    .header-logo {
+        height: 40px;
+    }
+    
+    .hero-headline {
+        font-size: 28px;
+    }
+    
+    .hero-subhead {
+        font-size: 16px;
+    }
+    
+    .btn-primary {
+        padding: 16px 36px;
+        font-size: 16px;
+    }
+    
+    .micro-benefits {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .final-cta-headline {
+        font-size: 32px;
+    }
+}
