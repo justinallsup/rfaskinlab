@@ -2,7 +2,12 @@
   "rewrites": [
     { "source": "/quiz", "destination": "/quiz.html" },
     { "source": "/results", "destination": "/results.html" },
-    { "source": "/cart", "destination": "/cart.html" }
+    { "source": "/cart", "destination": "/cart.html" },
+    { "source": "/acne", "destination": "/acne.html" },
+    { "source": "/anti-aging", "destination": "/anti-aging.html" },
+    { "source": "/dark-spots", "destination": "/dark-spots.html" },
+    { "source": "/sensitive-skin", "destination": "/sensitive-skin.html" },
+    { "source": "/pregnancy-safe-skincare", "destination": "/pregnancy-safe-skincare.html" }
   ],
   "cleanUrls": true
 }
