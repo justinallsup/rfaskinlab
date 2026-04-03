@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eye Serum Test</title>
+</head>
+<body>
+    <h1>Direct Image Test</h1>
+    <img src="/images/hydrating-eye-serum.jpg" alt="Hydrating Eye Serum" style="max-width: 400px;">
+    
+    <h2>Quiz Result Simulation</h2>
+    <div id="test"></div>
+    
+    <script>
+        // Simulate what results.js does
+        const productName = 'Hydrating Eye Serum';
+        const imageMap = {
+            'Hydrating Eye Serum': '/images/hydrating-eye-serum.jpg'
+        };
+        const imagePath = imageMap[productName];
+        
+        document.getElementById('test').innerHTML = `
+            <p>Product: ${productName}</p>
+            <p>Image Path: ${imagePath}</p>
+            <img src="${imagePath}" alt="${productName}" style="max-width: 400px;" onerror="this.style.border='3px solid red'; this.alt='FAILED TO LOAD';">
+        `;
+    </script>
+</body>
+</html>
