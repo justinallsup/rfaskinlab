@@ -259,7 +259,7 @@ class ResultsPage {
             'Radiant Vitamin C Serum': '/images/radiant-vitamin-c_1.jpg',
             'Sheer Protect SPF 50': '/images/sheer-protect-spf-50_1.jpg',
             'Light Lotion': '/images/light-lotion_1.jpg',
-            'Hydrating Eye Serum': '/images/eye-serum.jpg',
+            'Hydrating Eye Serum': '/images/hydrating-eye-serum.jpg',
             'Silk Serum': '/images/silk-serum.jpg',
             'Exfoliating Scrub': '/images/exfoliating-scrub.jpg',
             'Lux Pads': '/images/lux-pads.jpg'
