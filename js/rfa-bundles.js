@@ -12,11 +12,11 @@ const RFA_BUNDLES = {
         shortDesc: 'Calm redness, strengthen barrier, reduce sensitivity',
         concern: 'Redness/Rosacea',
         products: [
-            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Soothing, non-stripping cleanse that respects delicate balance' },
-            { name: 'Clear & Calm Serum', step: 2, hero: true, benefit: 'Specialized serum targets redness and inflammation' },
-            { name: 'Hydrating Gel', step: 3, benefit: 'Lightweight cooling hydration without heaviness' },
-            { name: 'Hydrating Toner', step: 1.5, benefit: 'Alcohol-free, balances pH, reduces sensitivity' },
-            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Ultra-gentle mineral sunscreen for sensitive skin' }
+            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Soothing, non-stripping cleanse that respects delicate balance', image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Clear & Calm Serum', step: 2, hero: true, benefit: 'Specialized serum targets redness and inflammation', image: '/images/clear-calm-serum_1.jpg' },
+            { name: 'Hydrating Gel', step: 3, benefit: 'Lightweight cooling hydration without heaviness', image: '/images/hydrating-gel_1.jpg' },
+            { name: 'Hydrating Toner', step: 1.5, benefit: 'Alcohol-free, balances pH, reduces sensitivity', image: '/images/hydrating-toner.jpg' },
+            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Ultra-gentle mineral sunscreen for sensitive skin', image: '/images/sheer-protect-spf-50_1.jpg' }
         ],
         rating: 4.8,
         reviews: 6,
@@ -34,11 +34,11 @@ const RFA_BUNDLES = {
         shortDesc: 'Clear breakouts, unclog pores, prevent new acne',
         concern: 'Acne/Blemishes',
         products: [
-            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Non-stripping cleanse removes impurities without disrupting barrier' },
-            { name: 'Mandelic 5% Pads', step: 2, hero: true, benefit: 'Gentle exfoliation unclogs pores and smooths texture' },
-            { name: 'BPO 2.5%', step: 2.5, benefit: 'Targeted benzoyl peroxide fights acne-causing bacteria' },
-            { name: 'Hydrating Gel', step: 3, benefit: "Lightweight hydration that won't clog pores" },
-            { name: 'Light Lotion', step: 3.5, benefit: 'Oil-free moisturizer balances acne-prone skin' }
+            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Non-stripping cleanse removes impurities without disrupting barrier', image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Mandelic 5% Pads', step: 2, hero: true, benefit: 'Gentle exfoliation unclogs pores and smooths texture', image: '/images/brightening-pads_1.jpg' },
+            { name: 'BPO 2.5%', step: 2.5, benefit: 'Targeted benzoyl peroxide fights acne-causing bacteria', image: '/images/bpo-2-5_1.jpg' },
+            { name: 'Hydrating Gel', step: 3, benefit: "Lightweight hydration that won't clog pores", image: '/images/hydrating-gel_1.jpg' },
+            { name: 'Light Lotion', step: 3.5, benefit: 'Oil-free moisturizer balances acne-prone skin', image: '/images/light-lotion_1.jpg' }
         ],
         rating: 4.8,
         reviews: 15,
@@ -56,11 +56,11 @@ const RFA_BUNDLES = {
         shortDesc: 'Reduce dark spots, brighten complexion, even tone',
         concern: 'Hyperpigmentation/Melasma',
         products: [
-            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Deep cleanse without stripping natural oils' },
-            { name: 'Koji Clear Pads', step: 2, hero: true, benefit: 'Patent-pending formula visibly reduces hyperpigmentation' },
-            { name: 'Radiant Vitamin C', step: 2.5, benefit: 'Powerful antioxidant brightens and protects' },
-            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'Age-defying hydration with barrier support' },
-            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Essential protection prevents new dark spots' }
+            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Deep cleanse without stripping natural oils', image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Koji Clear Pads', step: 2, hero: true, benefit: 'Patent-pending formula visibly reduces hyperpigmentation', image: '/images/brightening-pads_1.jpg' },
+            { name: 'Radiant Vitamin C', step: 2.5, benefit: 'Powerful antioxidant brightens and protects', image: '/images/radiant-vitamin-c_1.jpg' },
+            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'Age-defying hydration with barrier support', image: '/images/hydralipid-moisturizer-1_1.jpg' },
+            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Essential protection prevents new dark spots', image: '/images/sheer-protect-spf-50_1.jpg' }
         ],
         rating: 5.0,
         reviews: 7,
@@ -78,11 +78,11 @@ const RFA_BUNDLES = {
         shortDesc: 'Deep hydration, strengthen barrier, plump skin',
         concern: 'Dryness/Dehydration',
         products: [
-            { name: 'Gentle Foaming Cleanser', step: 1, benefit: "Maintains skin's natural moisture balance" },
-            { name: 'Hydrating Toner', step: 1.5, benefit: 'Replenishing layers lock in hydration' },
-            { name: 'HA Peptide Serum', step: 2, hero: true, benefit: 'Deep hydration + collagen-boosting peptides' },
-            { name: 'Hydrating Eye Serum', step: 2.5, benefit: 'Smooths fine lines, reduces puffiness' },
-            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'Strengthens moisture barrier without heaviness' }
+            { name: 'Gentle Foaming Cleanser', step: 1, benefit: "Maintains skin's natural moisture balance", image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Hydrating Toner', step: 1.5, benefit: 'Replenishing layers lock in hydration', image: '/images/hydrating-toner.jpg' },
+            { name: 'HA Peptide Serum', step: 2, hero: true, benefit: 'Deep hydration + collagen-boosting peptides', image: '/images/ha-peptide-serum-1_1.jpg' },
+            { name: 'Hydrating Eye Serum', step: 2.5, benefit: 'Smooths fine lines, reduces puffiness', image: '/images/hydrating-eye-serum.jpg' },
+            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'Strengthens moisture barrier without heaviness', image: '/images/hydralipid-moisturizer-1_1.jpg' }
         ],
         rating: 4.7,
         reviews: 7,
@@ -100,11 +100,11 @@ const RFA_BUNDLES = {
         shortDesc: 'Reduce fine lines, boost collagen, protect skin',
         concern: 'Anti-Aging',
         products: [
-            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Removes impurities while maintaining moisture barrier' },
-            { name: 'Radiant Vitamin C Serum', step: 2, benefit: 'Brightens and protects against free radicals' },
-            { name: 'Retinol 25', step: 2.5, hero: true, benefit: 'Promotes cell turnover, reduces fine lines' },
-            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'Deep hydration with anti-aging benefits' },
-            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Guards against UV damage and photoaging' }
+            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Removes impurities while maintaining moisture barrier', image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Radiant Vitamin C Serum', step: 2, benefit: 'Brightens and protects against free radicals', image: '/images/radiant-vitamin-c_1.jpg' },
+            { name: 'Retinol 25', step: 2.5, hero: true, benefit: 'Promotes cell turnover, reduces fine lines', image: '/images/forever-young-retinol-50_1.jpg' },
+            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'Deep hydration with anti-aging benefits', image: '/images/hydralipid-moisturizer-1_1.jpg' },
+            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Guards against UV damage and photoaging', image: '/images/sheer-protect-spf-50_1.jpg' }
         ],
         rating: 4.8,
         reviews: 8,
@@ -122,11 +122,11 @@ const RFA_BUNDLES = {
         shortDesc: 'Pregnancy-safe, supports changing skin',
         concern: 'Pregnancy/Nursing',
         products: [
-            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Effectively removes impurities while maintaining moisture—perfect for hormone-sensitive skin.' },
-            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'This gentle moisturizer helps maintain elasticity and hydration without any harsh ingredients, supporting your skin as it adapts through every trimester.' },
-            { name: 'Radiant Vitamin C', step: 2, hero: true, benefit: 'Safe, stable brightening support for pregnancy-related pigmentation. Helps maintain your natural glow while targeting uneven tone and dark spots—the perfect companion for combating pregnancy mask.' },
-            { name: 'Brightening Pads', step: 2.5, benefit: 'Gentle exfoliation for that pregnancy glow, without any harsh ingredients. These pads help maintain clear, bright skin while respecting your skin\'s increased sensitivity.' },
-            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Essential broad-spectrum protection in a lightweight formula. Guards against pigmentation changes while providing crucial UV defense for your extra-sensitive skin.' }
+            { name: 'Gentle Foaming Cleanser', step: 1, benefit: 'Effectively removes impurities while maintaining moisture—perfect for hormone-sensitive skin.', image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Hydralipid Moisturizer', step: 3, benefit: 'This gentle moisturizer helps maintain elasticity and hydration without any harsh ingredients, supporting your skin as it adapts through every trimester.', image: '/images/hydralipid-moisturizer-1_1.jpg' },
+            { name: 'Radiant Vitamin C', step: 2, hero: true, benefit: 'Safe, stable brightening support for pregnancy-related pigmentation. Helps maintain your natural glow while targeting uneven tone and dark spots—the perfect companion for combating pregnancy mask.', image: '/images/radiant-vitamin-c_1.jpg' },
+            { name: 'Brightening Pads', step: 2.5, benefit: 'Gentle exfoliation for that pregnancy glow, without any harsh ingredients. These pads help maintain clear, bright skin while respecting your skin\'s increased sensitivity.', image: '/images/brightening-pads_1.jpg' },
+            { name: 'Sheer Protect SPF 50', step: 4, benefit: 'Essential broad-spectrum protection in a lightweight formula. Guards against pigmentation changes while providing crucial UV defense for your extra-sensitive skin.', image: '/images/sheer-protect-spf-50_1.jpg' }
         ],
         rating: 5.0,
         reviews: 9,
@@ -144,9 +144,9 @@ const RFA_BUNDLES = {
         shortDesc: 'Simple routine, clear skin, build healthy habits',
         concern: 'Teen Skin',
         products: [
-            { name: 'Purifying Cleanser', step: 1, benefit: 'Removes dirt and oil without drying' },
-            { name: 'Mandelic 5% Pads', step: 2, hero: true, benefit: 'Clears pores and kills acne-causing bacteria' },
-            { name: 'Hydrating Gel', step: 3, benefit: "Lightweight, won't cause breakouts" }
+            { name: 'Purifying Cleanser', step: 1, benefit: 'Removes dirt and oil without drying', image: '/images/gentle-foaming-cleanser_1.jpg' },
+            { name: 'Mandelic 5% Pads', step: 2, hero: true, benefit: 'Clears pores and kills acne-causing bacteria', image: '/images/brightening-pads_1.jpg' },
+            { name: 'Hydrating Gel', step: 3, benefit: "Lightweight, won't cause breakouts", image: '/images/hydrating-gel_1.jpg' }
         ],
         rating: 5.0,
         reviews: 2,
